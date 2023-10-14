@@ -172,6 +172,9 @@
                     <a class="dropdown-item" href="{{ url('/categories') }}">
                         <i class='bx bx-search-alt'></i> {{ __('Categoría') }}
                     </a>
+                    <a class="dropdown-item" href="{{ url('/products') }}">
+                        <i class='bx bx-table'></i> {{ __('Productos') }}
+                    </a>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">

@@ -54,6 +54,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::resource('plans', PlanController::class);
         Route::resource('categories', CategoryController::class);
+        Route::resource('products', ProductController::class)->names('products');
 
         Route::resource('roles', RoleController::class);
         Route::resource('permissions', PermissionController::class);
