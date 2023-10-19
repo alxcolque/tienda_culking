@@ -12,52 +12,13 @@
 
                 </li>
                 <li class="nav-item-c">
-                    <a href="/canchas" class="nav-link-c">
+                    <a href="#" class="nav-link-c">
                         <i class='bx bx-notepad nav-icon-c'></i>
-                        <span class="nav-name-c">Canchas</span>
+                        <span class="nav-name-c">Tienda</span>
                     </a>
                 </li>
                 @auth
-                @role('admin')
-
-                <li class="nav-item-c">
-                    <a href="/users" class="nav-link-c">
-                        <i class='bx bx-user nav-icon-c'></i>
-                        <span class="nav-name-c">Usuarios</span>
-                    </a>
-                </li>
-                <li class="nav-item-c">
-                    <a href="{{ route('roles.index') }}" class="nav-link-c">
-                        <i class='bx bx-shield-quarter nav-icon-c'></i>
-                        <span class="nav-name-c">Roles</span>
-                    </a>
-                </li>
-                <li class="nav-item-c">
-                    <a href="{{ route('permissions.index') }}" class="nav-link-c">
-                        <i class='bx bx-shield-quarter nav-icon-c'></i>
-                        <span class="nav-name-c">Permisos</span>
-                    </a>
-                </li>
-                @endrole
                 @endauth
-                {{-- <li class="nav-item-c">
-                    <a href="/users" class="nav-link-c">
-                        <i class='bx bx-shield-quarter nav-icon-c'></i>
-                        <span class="nav-name-c">Roles</span>
-                    </a>
-                </li>
-                <li class="nav-item-c">
-                    <a href="/users" class="nav-link-c">
-                        <i class='bx bx-shield-quarter nav-icon-c'></i>
-                        <span class="nav-name-c">Usuarios</span>
-                    </a>
-                </li> --}}
-                {{-- <li class="nav-item-c">
-                    <a href="/competiciones" class="nav-link-c">
-                        <i class='bx bx-trophy nav-icon-c'></i>
-                        <span class="nav-name-c">Torneos</span>
-                    </a>
-                </li> --}}
                 <li class="nav-item-c" id="themeButton">
                     <a class="nav-link-c">
                         <i class='bx bx-cog nav-icon-c'></i>
@@ -104,61 +65,16 @@
 
             </a>
             <ul class="dropdown-menu text-small shadow dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item">
 
-                    <a href="https://cuenta.culking.com/" title="Cuenta"
-                        class="btn btn-secondary btn-circle btn-circle-lg m-1 mt-2">
-                        <i class='bx bxs-user-circle'></i>
-                        <span class="newest-review-title">Cuenta</span>
-                    </a>
-                    <!-- https://reserva.culking.com/ -->
-                    <a href="https://cuenta.culking.com/" title="Reservación de la cancha"
-                        class="btn btn-light btn-circle btn-circle-lg m-1 mt-2 disabled">
-                        <i class='bx bx-task'></i>
-                        <span class="newest-review-title">Reservar</span>
-                    </a>
-                    <a href="https://deporte.culking.com/" title="Eventos deportivos"
-                        class="btn btn-danger btn-circle btn-circle-lg m-1 mt-2 disabled">
-                        <i class='bx bx-run'></i>
-                        <span class="newest-review-title">Deporte</span>
-                    </a>
-                    <!-- https://shop.culking.com/ -->
-                    <a href="#" title="Tienda" class="btn btn-success btn-circle btn-circle-lg m-1 mt-2 disabled">
-                        <i class='bx bxs-cart'></i>
-                        <span class="newest-review-title">Tienda</span>
-                    </a>
-                    <!-- https://trabajos.culking.com/ -->
-                    <a href="#" title="Trabajos publicados"
-                        class="btn btn-warning btn-circle btn-circle-lg m-1 mt-2 disabled">
-                        <i class='bx bx-wrench'></i>
-                        <span class="newest-review-title">Trabajos</span>
-                    </a>
-
-                    <!-- https://servicios.culking.com/ -->
-                    <a href="#" title="Publicaciones de Servicios"
-                        class="btn btn-info btn-circle btn-circle-lg m-1 mt-2 disabled">
-                        <i class='bx bxs-megaphone'></i>
-                        <span class="newest-review-title">Avisos</span>
-                    </a>
-
-                    <!-- https://educacion.culking.com/ -->
-                    <a href="#" title="Educación" class="btn btn-primary btn-circle btn-circle-lg m-1 mt-2 disabled">
-                        <i class='bx bxs-graduation'></i>
-                        <span class="newest-review-title">Educación</span>
-                    </a>
-                    <!-- https://courses.culking.com/ -->
-                    <a href="#" title="Cursos" class="btn btn-dark btn-circle btn-circle-lg m-1 mt-2 disabled">
-                        <i class='bx bxl-discourse'></i>
-                        <span class="newest-review-title">Cursos</span>
-                    </a>
-                    <!-- https://noticias.culking.com/ -->
-                    <a href="#" title="Noticias"
-                        class="btn btn-secondary btn-circle btn-circle-lg m-1 mt-2 disabled">
-                        <i class='bx bx-news'></i>
-                        <span class="newest-review-title">Noticias</span>
-                    </a>
+                <a class="dropdown-item" href="{{ url('/users') }}">
+                    <i class='bx bx-search-alt'></i> {{ __('Usuarios') }}
                 </a>
-                <hr>
+                <a class="dropdown-item" href="{{ route('roles.index') }}">
+                    <i class='bx bx-search-alt'></i> {{ __('Roles') }}
+                </a>
+                <a class="dropdown-item" href="{{ route('permissions.index') }}">
+                    <i class='bx bx-search-alt'></i> {{ __('Permisos') }}
+                </a>
                 @if (Auth::user()->role == 'admin')
                     <a class="dropdown-item" href="{{ url('https://cuenta.culking.com/logactivity') }}">
                         <i class='bx bx-search-alt'></i> {{ __('Bitácora') }}
