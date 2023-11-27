@@ -2464,7 +2464,7 @@ input::-ms-clear {
 .banner-bg {
   padding: 7em 0;
   position: relative;
-  background: #f5f5f5 url(../images/banners/banner-bg.jpg) repeat fixed center center;
+  background: #f5f5f5 url("https://www.campaniartecard.it/wp-content/uploads/2020/04/artecard_banner.jpg") repeat fixed center center;
   background-size: cover; }
   .banner-bg__wrap {
     text-align: center; }
@@ -6037,11 +6037,11 @@ input::-ms-clear {
 .hero-slide {
   background: center center/cover no-repeat; }
   .hero-slide--1 {
-    background-image: url(../images/slider/slide-1.jpg); }
+    background-image: url("https://prinnovations.in/wp-content/uploads/2020/01/Industry-consumer-banner-1.jpg"); }
   .hero-slide--2 {
-    background-image: url(../images/slider/slide-2.jpg); }
+    background-image: url("https://www.all-systems.com.au/img/carousel4.5c299682.jpg"); }
   .hero-slide--3 {
-    background-image: url(../images/slider/slide-3.jpg); }
+    background-image: url("https://www.infosys.com/content/dam/infosys-web/en/industries/high-technology/images/ecommerce-solution-lead.png"); }
   .hero-slide--4 {
     background-image: url(../images/slider/slide-4.jpg); }
   .hero-slide--5 {
